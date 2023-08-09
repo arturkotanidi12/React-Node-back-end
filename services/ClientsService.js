@@ -37,12 +37,7 @@ module.exports = class extends BaseService {
     }
       return this.response({
         statusCode: 201,
-        data: {
-          ip_address: req.body.ip_address,
-          session_id: req.body.session_id,
-          url: req.body.url,
-          timestamp: req.body.timestamp
-        }
+        data: records
       });
 
     } catch(error) {

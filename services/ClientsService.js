@@ -30,7 +30,7 @@ module.exports = class extends BaseService {
       const parseRecords = records.map(el => el.fields)
       const condition = (this.findLastItemWithIpAddress(parseRecords , recordData.ip_address))
 
-    if (!parseRecords.length || (condition.timestamp !== recordData.timestamp)) {
+    if (!(Object.keys(condition).length) || (condition.timestamp !== recordData.timestamp)) {
       base(tableName).create(recordData, (err, record) => {
         if (err) throw new Error(err)
       });

@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(
   cors({
     credentials: true,
-    origin: ['https://274d-2a00-cc47-21fd-fb00-890-3109-31ad-cb6a.ngrok-free.app'],
+    origin: ['https://2359-2a00-cc47-21fd-fb00-890-3109-31ad-cb6a.ngrok-free.app'],
   })
 );
 
